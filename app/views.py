@@ -11,12 +11,14 @@ def home(request):
         searched1=[]
         #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         model_path = os.path.join(settings.STATIC_ROOT, 'model.pkl')
+        data_path = os.path.join(settings.STATIC_ROOT, 'data.pkl')
+        vectors_path = os.path.join(settings.STATIC_ROOT, 'vectors.pkl')
         #model_path = os.path.join(BASE_DIR, 'application', 'model.pkl')
         with open(model_path, "rb") as model1:
             model = pickle.load(model1)
-        with open("D:\\Django Projects\\application\\vectors.pkl", "rb") as vector1:
+        with open(vectors_path, "rb") as vector1:
             vectors = pickle.load(vector1)
-        with open("D:\\Django Projects\\application\\data.pkl", "rb") as data1:
+        with open(data_path, "rb") as data1:
             data = pickle.load(data1)
         titles = data["title"].tolist()
         best_match = process.extractOne(book_input, titles, scorer=fuzz.partial_ratio)
