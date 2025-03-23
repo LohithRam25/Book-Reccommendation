@@ -92,7 +92,9 @@
 
     <!-- Searched Book Section -->
     <div class="container my-5">
+        {% if searched %}
         <h1 class="section-heading">Book You Searched</h1>
+        {% endif %}
         {% for track_name, artist_name ,img_url, prod_url, stars in searched %}
         <div class="row post-container align-items-center">
             <!-- Post Image -->
@@ -124,7 +126,9 @@
 
     <!-- Similar Books Section -->
     <div class="container my-5">
+        {% if reccomendations %}
         <h1 class="section-heading">Similar Books to Your Search</h1>
+        {% endif %}
         {% for track_name, artist_name, img_url , prod_url, stars in reccomendations %}
         <div class="row post-container align-items-center">
             <!-- Post Image -->

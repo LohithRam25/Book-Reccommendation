@@ -7,11 +7,11 @@ def home(request):
         book_input = request.POST["song_name"]
         reccomendations=[]
         searched1=[]
-        with open("D:\\MACHINE LEARNING\\PROJECTS\\Book reccomendations\\model.pkl", "rb") as model1:
+        with open("D:\\Django Projects\\application\\model.pkl", "rb") as model1:
             model = pickle.load(model1)
-        with open("D:\\MACHINE LEARNING\\PROJECTS\\Book reccomendations\\vectors.pkl", "rb") as vector1:
+        with open("D:\\Django Projects\\application\\vectors.pkl", "rb") as vector1:
             vectors = pickle.load(vector1)
-        with open("D:\\MACHINE LEARNING\\PROJECTS\\Book reccomendations\\data.pkl", "rb") as data1:
+        with open("D:\\Django Projects\\application\\data.pkl", "rb") as data1:
             data = pickle.load(data1)
         titles = data["title"].tolist()
         best_match = process.extractOne(book_input, titles, scorer=fuzz.partial_ratio)
