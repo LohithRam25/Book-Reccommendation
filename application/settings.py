@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-ALLOWED_ORIGINS=["https://book-reccommendation-production.up.railway.app/*"]
+ALLOWED_ORIGINS=["https://book-reccommendation-production.up.railway.app/"]
 # Application definition
 
 INSTALLED_APPS = [
