@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 from environ import Env
 env=Env()
-env.read_env("D:\\MACHINE LEARNING\\PROJECTS\\Book reccomendations\\.env")
+env.read_env("D:\\Django Projects\\application\\.env")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,7 +29,6 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-ALLOWED_ORIGINS=["https://portfolio-production-864d.up.railway.app"]
 
 
 # Application definition
