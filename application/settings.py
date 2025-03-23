@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-ALLOWED_ORIGINS=["https://book-reccommendation-production.up.railway.app/"]
+ALLOWED_ORIGINS=["https://book-reccommendation-production.up.railway.app"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -72,7 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'application.wsgi.application'
-
+CSRF_TRUSTED_ORIGINS=["https://book-reccommendation-production.up.railway.app/*"]
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
